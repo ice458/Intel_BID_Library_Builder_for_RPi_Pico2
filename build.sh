@@ -10,11 +10,12 @@
 # - Lookup tables stored in flash memory to save RAM
 # - Compiler flags optimized for embedded systems memory usage
 # - Function/data section separation for better linker optimization
+# - Code size optimization: -Os (optimize for size), -flto (link-time optimization)
 
 set -e
 
 # Configuration
-PICO2_FLAGS="-mthumb -march=armv8-m.main+fp+dsp -mfloat-abi=softfp -mfpu=fpv5-sp-d16 -mcmse -DARM -DPICO2 -DBID_THREAD= -fdata-sections -ffunction-sections"
+PICO2_FLAGS="-mthumb -march=armv8-m.main+fp+dsp -mfloat-abi=softfp -mfpu=fpv5-sp-d16 -mcmse -DARM -DPICO2 -DBID_THREAD= -fdata-sections -ffunction-sections -Os"
 BUILD_DIR="build"
 OUTPUT_LIB="gcc111libbid_pico2.a"
 INTEL_LIB_VERSION="IntelRDFPMathLib20U2"
