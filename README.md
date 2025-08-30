@@ -118,7 +118,7 @@ The build script uses the following optimized settings for Pi Pico 2:
 ## Output
 
 The build process generates:
-- `gcc111libdecimal_pico2.a`: Optimized Intel Decimal Floating-Point Math Library for Pi Pico 2 (6.6MB)
+- `gcc111libbid_pico2.a`: Optimized Intel Decimal Floating-Point Math Library for Pi Pico 2 (6.6MB)
 
 ### Memory Optimization Results (Verified)
 - ** ROM Placement Success**: Large lookup tables moved to Flash ROM
@@ -163,14 +163,14 @@ The built library provides comprehensive decimal floating-point support:
 
 To use the library in your Pi Pico 2 project:
 
-1. Copy `gcc111libdecimal_pico2.a` to your project's library directory
+1. Copy `gcc111libbid_pico2.a` to your project's library directory
 2. Include the RDFP headers in your source:
    ```c
    #include "bid_functions.h"
    ```
 3. Link against the library:
    ```cmake
-   target_link_libraries(your_target gcc111libdecimal_pico2.a)
+   target_link_libraries(your_target gcc111libbid_pico2.a)
    ```
 
 ## Example Usage

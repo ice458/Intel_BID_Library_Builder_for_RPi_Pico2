@@ -16,7 +16,7 @@ set -e
 # Configuration
 PICO2_FLAGS="-mthumb -march=armv8-m.main+fp+dsp -mfloat-abi=softfp -mfpu=fpv5-sp-d16 -mcmse -DARM -DPICO2 -DBID_THREAD= -fdata-sections -ffunction-sections"
 BUILD_DIR="build"
-OUTPUT_LIB="gcc111libdecimal_pico2.a"
+OUTPUT_LIB="gcc111libbid_pico2.a"
 INTEL_LIB_VERSION="IntelRDFPMathLib20U2"
 
 # Verification mode (off by default). Enable by --verify-const or VERIFY_CONST=1
@@ -206,7 +206,7 @@ if [ -f "libbid.a" ]; then
   echo
   echo
   echo "Library ready for use with Pi Pico 2 projects!"
-  echo "Link with: -L. -ldecimal or add gcc111libdecimal_pico2.a to your project"
+  echo "Link with: -L. -lbid or add gcc111libbid_pico2.a to your project"
 else
   echo "Error: Build failed - libbid.a not found"
   exit 1
