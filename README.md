@@ -56,6 +56,19 @@ intel-decimal-floating-point-pico2/
 ./build.sh
 ```
 
+### Verification Mode (Optional)
+
+You can enable verification mode to check that all patched `const` arrays are placed in read-only memory and not written to at runtime.  
+This mode adds section attributes to patched arrays and inspects the resulting library to ensure correct placement.
+
+Enable verification mode by running:
+```bash
+./build.sh --verify-const
+# or
+VERIFY_CONST=1 ./build.sh
+```
+If any `const` array is not placed in a read-only section, the build will fail.
+
 ### Advanced Memory Optimization Process
 
 The build script implements a comprehensive memory optimization strategy:
