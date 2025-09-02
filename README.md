@@ -6,7 +6,11 @@ This directory contains a script for building the Intel Decimal Floating-Point M
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-**Important**: This project only provides build scripts and configuration. The Intel Decimal Floating-Point Math Library itself is licensed separately under Intel's BSD-style license. Users must obtain the Intel library source code separately and comply with Intel's license terms.
+Important notes about Intel's license:
+- This repository only contains build scripts and configuration for Intel's Decimal Floating-Point Math Library; it does not redistribute Intel's sources or license text.
+- The Intel Decimal Floating-Point Math Library is governed by Intel's own license. Please review Intel's End User License Agreement located at `IntelRDFPMathLib20U2/eula.txt` after you obtain and extract the archive from Intel.
+- The `.gitignore` intentionally excludes `IntelRDFPMathLib*`, so Intel's sources and their `eula.txt` are not checked into this repository.
+- You must obtain the Intel library from Intel and comply with the terms in `eula.txt`.
 
 ## Overview
 
@@ -47,7 +51,6 @@ intel-decimal-floating-point-pico2/
 │   ├── TESTS/
 │   └── ...
 └── build/          (created during build)
-```
 
 ## Building
 
@@ -183,10 +186,10 @@ This project is licensed under the MIT License. See [LICENSE](LICENSE) for full 
 ### Third-Party Components
 
 This project builds upon Intel's Decimal Floating-Point Math Library:
-- **Intel Library**: Licensed under Intel's BSD-style license
-- **Source**: Intel Decimal Floating-Point Math Library (IntelRDFPMathLib20U2)
-- **License**: See `IntelRDFPMathLib20U2/eula.txt` for Intel's license terms
-- **Availability**: Must be obtained separately from Intel
+- Intel Library: Provided by Intel under Intel's own license terms
+- Source: Intel Decimal Floating-Point Math Library (IntelRDFPMathLib20U2)
+- License: Refer to `IntelRDFPMathLib20U2/eula.txt` (present after you extract the archive obtained from Intel)
+- Availability: Not included here; you must obtain it directly from Intel
 
 The build scripts and configuration in this project are original works licensed under MIT.
 

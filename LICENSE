@@ -30,8 +30,8 @@ this repository but is required for building. Users must obtain the Intel
 library separately and comply with Intel's license terms.
 
 Intel Decimal Floating-Point Math Library:
-- Copyright (c) 2011, Intel Corp.
-- Licensed under BSD-style license (see IntelRDFPMathLib20U1/eula.txt)
+- Copyright (c) 2018, Intel Corp.
+- Licensed under BSD-style license (see IntelRDFPMathLib20U2/eula.txt)
 - Available from: https://software.intel.com/content/www/us/en/develop/articles/intel-decimal-floating-point-math-library.html
 
 The build scripts and configuration in this project are original works and are
